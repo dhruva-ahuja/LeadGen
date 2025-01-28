@@ -18,7 +18,6 @@ class KPIExtractor:
     def build_prompt(self, customer: str):
         prompt = f"""Extract the following KPIs for the {customer} below:\nKPIs:\n        
         - {'\n- '.join(get_kpi_list())}"""
-        print(prompt)
         return prompt
     
     def parse_kpi_response(self, response):
